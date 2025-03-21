@@ -1,0 +1,81 @@
+{
+  "banksResponse": {
+    "status": "success",
+    "message": "banks retrieved successfully",
+    "data": [
+      {
+        "Code": "398725",
+        "Name": "lion",
+        "SortNo": 6,
+        "CreatedBy": "mac Doe",
+        "CreatedAt": "2025-03-14T09:21:24.767372Z",
+        "UpdatedBy": "mac Doe",
+        "UpdatedAt": "2025-03-14T09:21:24.767372Z",
+        "ApprovedStatus": "Created",
+        "CreatedChecker": "mac Doe",
+        "UpdatedChecker": "mac Doe"
+      },
+      {
+        "Code": "9864",
+        "Name": "Testa",
+        "SortNo": 6,
+        "CreatedBy": "mac Doe",
+        "CreatedAt": "2025-03-15T08:13:08.024031Z",
+        "UpdatedBy": "mac Doe",
+        "UpdatedAt": "2025-03-17T07:30:42.853761Z",
+        "ApprovedStatus": "Created",
+        "CreatedChecker": "mac Doe",
+        "UpdatedChecker": "mac Doe"
+      },
+      {
+        "Code": "456456",
+        "Name": "updated name",
+        "SortNo": 15,
+        "CreatedBy": "mac Doe",
+        "CreatedAt": "2025-03-17T07:03:40.353019Z",
+        "UpdatedBy": "mac Doe",
+        "UpdatedAt": "2025-03-17T11:25:11.036907Z",
+        "ApprovedStatus": "Created",
+        "CreatedChecker": "mac Doe",
+        "UpdatedChecker": "mac Doe"
+      },
+      {
+        "Code": "456450",
+        "Name": "new bank",
+        "SortNo": 15,
+        "CreatedBy": "mac Doe",
+        "CreatedAt": "2025-03-17T14:57:05.488911Z",
+        "UpdatedBy": "",
+        "UpdatedAt": "2025-03-17T14:57:05.488911Z",
+        "ApprovedStatus": "Created",
+        "CreatedChecker": "mac Doe",
+        "UpdatedChecker": ""
+      },
+      {
+        "Code": "234234",
+        "Name": "vvhgvg",
+        "SortNo": 2,
+        "CreatedBy": "mac Doe",
+        "CreatedAt": "2025-03-18T08:29:30.91403Z",
+        "UpdatedBy": "",
+        "UpdatedAt": "2025-03-18T08:29:30.91403Z",
+        "ApprovedStatus": "Created",
+        "CreatedChecker": "mac Doe",
+        "UpdatedChecker": ""
+      },
+      {
+        "Code": "123454",
+        "Name": "Advert",
+        "SortNo": 21,
+        "CreatedBy": "mac Doe",
+        "CreatedAt": "2025-03-18T08:23:52.232087Z",
+        "UpdatedBy": "mac Doe",
+        "UpdatedAt": "2025-03-18T08:34:32.042716Z",
+        "ApprovedStatus": "Created",
+        "CreatedChecker": "",
+        "UpdatedChecker": "mac Doe"
+      }
+    ],
+    "timestamp": "2025-03-18T13:34:41.902474089Z"
+  }
+}

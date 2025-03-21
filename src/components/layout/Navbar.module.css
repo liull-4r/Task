@@ -1,0 +1,115 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Greeting Section */
+
+.greeting span {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.greeting h2 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* Search Container */
+.searchContainer {
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  width: 340px;
+}
+
+/* Search Icon */
+.searchIcon {
+  font-size: 22px;
+
+  margin-right: 6px;
+}
+
+/* Search Input */
+.searchInput {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .searchContainer {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.notification {
+  position: relative;
+  cursor: pointer;
+}
+
+.bellIcon {
+  font-size: 24px;
+  color: #333;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: orange;
+  color: #fff;
+  font-size: 12px;
+  width: 18px; /* Fixed width */
+  height: 18px; /* Fixed height */
+  line-height: 18px; /* Center the text vertically */
+  text-align: center;
+  border-radius: 50%; /* Perfect Circle */
+  font-weight: bold;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userName {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.topRightContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}

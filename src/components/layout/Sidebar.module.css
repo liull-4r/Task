@@ -1,0 +1,95 @@
+/* Sidebar Container */
+.sidebar {
+  width: 350px;
+  margin: 15px;
+  background: #ffffff;
+  color: #201f1f;
+  padding: 10px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.break {
+  opacity: 0.4;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Sidebar Menu */
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin-bottom: 7px;
+}
+
+/* Sidebar Links */
+.menu li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.7;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+/* Icon Spacing */
+.icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* Hover & Active Styles */
+.menu li a:hover,
+.menu li .active {
+  background: #070692;
+  color: #ffffff;
+}
+
+.logout {
+  margin-top: auto;
+}
+
+.logout button {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+  background: #d9534f;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer; /* ✅ Cursor pointer */
+  transition: background 0.3s ease;
+}
+
+.logout button:hover {
+  background: #c9302c; /* Optional hover effect */
+}
+
+.icon {
+  font-size: 20px;
+}
+
+.dropdownHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Adjust spacing as needed */
+  cursor: pointer;
+}
+
+.subMenu {
+  padding-left: 20px;
+}
+
+.subMenu li {
+  padding: 8px 0;
+}
