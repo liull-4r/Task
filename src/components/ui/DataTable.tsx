@@ -30,10 +30,11 @@ export default function DataTable({ data }: { data: any[] }) {
   const { mutate: deleteBank } = useDeleteBank();
 
   const handleEdit = (row: any) => {
-    navigate(`/edit-bank/${row.Code}`, { state: { bankData: row } });
+    console.log("edit row is", row);
+    navigate(`/edit-bank/${row.code}`, { state: { bankData: row } });
   };
 
-  const handleDelete = (Code: string) => {
+  const handleDelete = (code: string) => {
     Swal.fire({
       title: "Are you sure?",
       text: "This action cannot be undone!",
@@ -44,7 +45,7 @@ export default function DataTable({ data }: { data: any[] }) {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        deleteBank(Code, {
+        deleteBank(code, {
           onSuccess: () => {
             Swal.fire("Deleted!", "The bank has been deleted.", "success");
           },
@@ -90,13 +91,13 @@ export default function DataTable({ data }: { data: any[] }) {
           {data
             ?.slice((currentPage - 1) * rowsPerPage, currentPage * rowsPerPage)
             .map((row) => (
-              <tr key={row.Code} className="border  relative cursor-pointer">
+              <tr key={row.code} className="border  relative cursor-pointer">
                 <td className="p-3 border">
                   {/* <input type="checkbox" /> */}
                   <input
                     type="checkbox"
                     checked={selectedRows.some(
-                      (selectedRow) => selectedRow.Code === row.Code
+                      (selectedRow) => selectedRow.code === row.code
                     )}
                     onChange={(e) => {
                       if (e.target.checked) {
@@ -105,7 +106,7 @@ export default function DataTable({ data }: { data: any[] }) {
                         dispatch(
                           setSelected(
                             selectedRows.filter(
-                              (selectedRow) => selectedRow.Code !== row.Code
+                              (selectedRow) => selectedRow.code !== row.code
                             )
                           )
                         );
@@ -113,30 +114,30 @@ export default function DataTable({ data }: { data: any[] }) {
                     }}
                   />
                 </td>
-                <td className="p-3 border">{row.Code}</td>
-                <td className="p-3 border">{row.Name}</td>
-                <td className="p-3 border">{row.SortNo}</td>
-                <td className="p-3 border">{row.CreatedBy}</td>
+                <td className="p-3 border">{row.code}</td>
+                <td className="p-3 border">{row.name}</td>
+                <td className="p-3 border">{row.sort_no}</td>
+                <td className="p-3 border">{row.created_by}</td>
                 <td className="p-3 border">
                   {/* {row.CreatedAt.slice(0, 10)} */}
 
-                  {row.CreatedAt ? row.CreatedAt.slice(0, 10) : "N/A"}
+                  {row.created_at ? row.created_at.slice(0, 10) : "N/A"}
                 </td>
-                <td className="p-3 border">{row.UpdatedBy}</td>
+                <td className="p-3 border">{row.updated_by}</td>
                 <td className="p-3 border">
                   {/* {row.UpdatedAt.slice(0, 10)} */}
-                  {row.UpdatedAt ? row.UpdatedAt.slice(0, 10) : "N/A"}
+                  {row.updated_at ? row.updated_at.slice(0, 10) : "N/A"}
                 </td>
                 <td className="p-3 border text-right relative">
                   <button
                     onClick={() =>
-                      setMenuRow(menuRow === row.Code ? null : row.Code)
+                      setMenuRow(menuRow === row.code ? null : row.code)
                     }
                     className="cursor-pointer"
                   >
                     <BsThreeDotsVertical />
                   </button>
-                  {menuRow === row.Code && (
+                  {menuRow === row.code && (
                     <ActionMenu
                       items={[
                         {
@@ -149,7 +150,7 @@ export default function DataTable({ data }: { data: any[] }) {
                           label: "Delete",
                           icon: <RiDeleteBin6Line />,
                           color: "text-red-600",
-                          onClick: () => handleDelete(row.Code),
+                          onClick: () => handleDelete(row.code),
                         },
                       ]}
                     />

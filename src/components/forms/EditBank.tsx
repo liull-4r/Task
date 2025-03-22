@@ -27,8 +27,8 @@ export default function EditBank() {
   } = useForm<UpdateBankFormData>({
     resolver: zodResolver(updateBankSchema),
     defaultValues: {
-      name: bankData?.Name || "",
-      sortNo: bankData?.SortNo || 0,
+      name: bankData?.name || "",
+      sortNo: bankData?.sort_no || 0,
     },
   });
 
